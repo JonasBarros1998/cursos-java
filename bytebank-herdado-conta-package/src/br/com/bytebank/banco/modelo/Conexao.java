@@ -1,3 +1,5 @@
+package br.com.bytebank.banco.modelo;
+
 public class Conexao implements AutoCloseable {
   public Conexao() {
     System.out.println("Abrindo conexao");
