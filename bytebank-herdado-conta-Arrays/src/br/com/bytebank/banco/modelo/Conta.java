@@ -1,6 +1,6 @@
 package br.com.bytebank.banco.modelo;
 
-abstract class Conta {
+abstract class Conta extends Object {
 
   double saldo;
   private int agencia;
@@ -74,6 +74,16 @@ abstract class Conta {
 
   public static int getTotal() {
     return Conta.total;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    Conta conta = (Conta) obj;
+    System.out.println(this.numero +">>"+ conta.numero);
+    if (this.numero != conta.numero) {
+      return false;
+    }
+    return true;
   }
 
 }
