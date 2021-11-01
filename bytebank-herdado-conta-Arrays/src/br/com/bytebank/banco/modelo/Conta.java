@@ -1,6 +1,6 @@
 package br.com.bytebank.banco.modelo;
 
-abstract class Conta extends Object {
+public abstract class Conta extends Object {
 
   double saldo;
   private int agencia;
