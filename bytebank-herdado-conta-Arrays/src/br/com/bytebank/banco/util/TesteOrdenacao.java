@@ -6,14 +6,16 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.Cliente;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Teste {
+public class TesteOrdenacao {
 
 	public static void main(String[] args) {
 
-		Conta cc1 = new ContaCorrente(22, 33);
+    Conta cc1 = new ContaCorrente(22, 33);
     Cliente clienteCC1 = new Cliente();
     clienteCC1.setNome("Nico");
     cc1.setTitular(clienteCC1);
@@ -49,12 +51,13 @@ public class Teste {
 
 		System.out.println("--------------");
 
+		//TitularDaContaComparator titularComparator = new TitularDaContaComparator();
 		NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-		TitularDaContaComparator titularComparator = new TitularDaContaComparator();
 		lista.sort(comparator);
 
 		for (Conta conta : lista) {
-			System.out.println(conta.getNumero() + ", " + conta.getTitular().getNome());
+			System.out.println(conta.getNumero() + ", " + conta.getTitular().getNome() + ", " + conta.getSaldo());
+
 		}
 	}
 }
