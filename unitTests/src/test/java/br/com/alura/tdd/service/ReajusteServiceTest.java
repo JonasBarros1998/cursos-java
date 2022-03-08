@@ -22,7 +22,7 @@ import br.com.alura.tdd.modelo.Funcionario;
  * @AfterAll Executar um metodo depois que todos os metodos de teste serem executados
  * 
  */
-ls 
+
 public class ReajusteServiceTest {
 
   private ReajusteService service;
