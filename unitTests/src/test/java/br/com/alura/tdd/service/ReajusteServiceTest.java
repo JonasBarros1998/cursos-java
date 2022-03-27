@@ -18,8 +18,8 @@ import br.com.alura.tdd.modelo.Funcionario;
  * Notações do JUnit
  * 
  * @AfterEach executar um metodo após cada uma dos metodos serem chamados
- * @BeforeAll Executar um metodo antes de todos os metodos de teste serem executados
- * @AfterAll Executar um metodo depois que todos os metodos de teste serem executados
+ * @BeforeAll Executar um metodo antes de todos os metodos de teste foram executados
+ * @AfterAll Executar um metodo depois que todos os metodos de teste foram executados
  * 
  */
 
