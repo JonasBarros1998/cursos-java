@@ -6,54 +6,32 @@ import br.com.alura.forum.modelo.Resposta;
 
 public class RespostaDto {
 
-  private Long id;
-  private String mensagem;
-  private LocalDateTime dataCriacao;
-  private String nomeAutor;
+	private Long id;
+	private String mensagem;
+	private LocalDateTime dataCriacao;
+	private String nomeAutor;
+	
+	public RespostaDto(Resposta resposta) {
+		this.id = resposta.getId();
+		this.mensagem = resposta.getMensagem();
+		this.dataCriacao = resposta.getDataCriacao();
+		this.nomeAutor = resposta.getAutor().getNome();
+	}
 
-  public RespostaDto(Resposta resposta) {
-    this.id = resposta.getId();
-    this.mensagem = resposta.getMensagem();
-    this.dataCriacao = resposta.getDataCriacao();
-    this.nomeAutor = resposta.getAutor().getNome();
-  }
+	public Long getId() {
+		return id;
+	}
 
-  public String getNomeAutor() {
-    return nomeAutor;
-  }
+	public String getMensagem() {
+		return mensagem;
+	}
 
+	public LocalDateTime getDataCriacao() {
+		return dataCriacao;
+	}
 
-  public void setNomeAutor(String nomeAutor) {
-    this.nomeAutor = nomeAutor;
-  }
-
-
-  public LocalDateTime getDataCriacao() {
-    return dataCriacao;
-  }
-
-
-  public void setDataCriacao(LocalDateTime dataCriacao) {
-    this.dataCriacao = dataCriacao;
-  }
-
-
-  public String getMensagem() {
-    return mensagem;
-  }
-
-
-  public void setMensagem(String mensagem) {
-    this.mensagem = mensagem;
-  }
-
-
-  public Long getId() {
-    return id;
-  }
-
-
-  public void setId(Long id) {
-    this.id = id;
-  }
+	public String getNomeAutor() {
+		return nomeAutor;
+	}
+	
 }
